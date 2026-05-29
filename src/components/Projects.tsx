@@ -38,7 +38,10 @@ const ProjectCard = ({ project, index, onOpenDemo }: { project: Project; index: 
             {project.images.map((img, idx) => (
               <div key={idx} className="w-full h-full flex-shrink-0 relative">
                 <img
-                  src={img.startsWith('/') ? img : (img.startsWith('./') ? img.slice(1) : '/' + img)}
+                  src={(() => {
+                    let p = img.replace(/^(\.\.\/)+/, '').replace(/^\.\//, '').replace(/^public\//, '');
+                    return p.startsWith('/') ? p : `/${p}`;
+                  })()}
                   alt={`${project.title} - Slide ${idx + 1}`}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
@@ -156,7 +159,7 @@ const Projects = () => {
       images: [
         "task-3.jpg",
         "task-2.jpg",
-        "task-3.jpg",
+        "task-1.jpg",
       ],
       githubUrl: "https://github.com/Blue55berry/Task-assignment",
     },
