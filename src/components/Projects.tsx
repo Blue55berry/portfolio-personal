@@ -278,7 +278,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="min-h-screen p-4 sm:p-6 md:p-8 lg:p-12 pt-16 sm:pt-20 md:pt-24 lg:pt-28 md:mt-4">
+    <div className="min-h-screen p-4 sm:p-6 md:p-8 lg:p-12 pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-24 md:pb-12 md:mt-4">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl mt-4 md:mt-0 sm:text-4xl md:text-5xl lg:text-6xl font-light text-center mb-8 sm:mb-12 md:mb-16 transform hover:scale-105 transition-all duration-500 text-gray-900">
           Projects
