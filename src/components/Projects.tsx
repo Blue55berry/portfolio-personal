@@ -38,7 +38,7 @@ const ProjectCard = ({ project, index, onOpenDemo }: { project: Project; index: 
             {project.images.map((img, idx) => (
               <div key={idx} className="w-full h-full flex-shrink-0 relative">
                 <img
-                  src={img}
+                  src={img.startsWith('/') ? img : (img.startsWith('./') ? img.slice(1) : '/' + img)}
                   alt={`${project.title} - Slide ${idx + 1}`}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
@@ -147,19 +147,6 @@ const Projects = () => {
   };
 
   const projects: Project[] = [
-    //Real time chat application
-    {
-      title: "Real-Time Chat Application",
-      description:
-        "Real-time chat application with user authentication and message history",
-      tech: ["Html", "Tailwind CSS", "Express", "Websocket", "MongoDB"],
-      images: [
-        "Screenshot 2025-06-26 193729.png",
-        "Screenshot 2025-06-26 195411.png",
-        "Screenshot 2025-06-26 200308.png",
-      ],
-      githubUrl: "https://github.com/Blue55berry/Task-assignment",
-    },
     //Task Assignment System completed
     {
       title: "Task Assignment System",
@@ -274,6 +261,19 @@ const Projects = () => {
         "oncapus-3.jpg",
       ],
       githubUrl: "https://github.com/kalai66/student-career-portal-16",
+    },
+     //Real time chat application
+    {
+      title: "Real-Time Chat Application",
+      description:
+        "Real-time chat application with user authentication and message history",
+      tech: ["Html", "Tailwind CSS", "Express", "Websocket", "MongoDB"],
+      images: [
+        "chat-app-1.webp",
+        "chat-app-1.webp",
+        "chat-app-1.webp",
+      ],
+      githubUrl: "https://github.com/Blue55berry/Task-assignment",
     },
   ];
 
