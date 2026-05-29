@@ -43,49 +43,44 @@ const Index = () => {
 
       <main className="flex-1 min-w-0 min-h-screen ml-0 md:ml-10 lg:ml-12 transition-all duration-500 flex flex-col">
         <section
-          className={`flex-1 flex items-center justify-center transition-all duration-700 ease-out ${
-            currentSection === "hero"
+          className={`flex-1 flex items-center justify-center transition-all duration-700 ease-out ${currentSection === "hero"
               ? "opacity-100 translate-y-0"
               : "opacity-0 pointer-events-none absolute"
-          }`}
+            }`}
         >
           {currentSection === "hero" && (
             <Hero setCurrentSection={setCurrentSection} />
           )}
         </section>
         <section
-          className={`flex-1 flex items-center justify-center transition-all duration-700 ease-out ${
-            currentSection === "about"
+          className={`flex-1 flex items-center justify-center transition-all duration-700 ease-out ${currentSection === "about"
               ? "opacity-100 translate-y-0"
               : "opacity-0 pointer-events-none absolute"
-          }`}
+            }`}
         >
           {currentSection === "about" && <About />}
         </section>
         <section
-          className={`flex-1 flex items-center justify-center transition-all duration-700 ease-out ${
-            currentSection === "skills"
+          className={`flex-1 flex items-center justify-center transition-all duration-700 ease-out ${currentSection === "skills"
               ? "opacity-100 translate-y-0"
               : "opacity-0 pointer-events-none absolute"
-          }`}
+            }`}
         >
           {currentSection === "skills" && <Skills />}
         </section>
         <section
-          className={`flex-1 flex items-center justify-center transition-all duration-700 ease-out ${
-            currentSection === "projects"
+          className={`flex-1 flex items-center justify-center transition-all duration-700 ease-out ${currentSection === "projects"
               ? "opacity-100 translate-y-0"
               : "opacity-0 pointer-events-none absolute"
-          }`}
+            }`}
         >
           {currentSection === "projects" && <Projects />}
         </section>
         <section
-          className={`flex-1 flex items-center justify-center transition-all duration-700 ease-out ${
-            currentSection === "education"
+          className={`flex-1 flex items-center justify-center transition-all duration-700 ease-out ${currentSection === "education"
               ? "opacity-100 translate-y-0"
               : "opacity-0 pointer-events-none absolute"
-          }`}
+            }`}
         >
           {currentSection === "education" && <Educations />}
         </section>

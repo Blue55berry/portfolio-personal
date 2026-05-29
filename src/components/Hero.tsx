@@ -67,7 +67,7 @@ const Hero = ({ setCurrentSection }: HeroProps) => {
 
       {/* Floating Educations text */}
       <div
-        className="fixed left-4 md:left-3 font-bold top-1/2 -translate-y-1/2 text-gray-600 text-sm sm:text-sm md:text-base lg:text-xl cursor-pointer hover:text-gray-400 transition-colors duration-200 z-20"
+        className="fixed left-4 md:left-3 font-bold top-1/2 -translate-y-1/2 text-gray-400 text-sm sm:text-sm md:text-base lg:text-xl cursor-pointer hover:text-gray-400 transition-colors duration-200 z-20"
         style={{ writingMode: "vertical-rl", transform: "rotate(180deg) translateY(50%)" }}
         onClick={() => setCurrentSection("education")}
       >
@@ -81,7 +81,7 @@ const Hero = ({ setCurrentSection }: HeroProps) => {
       >
         <button
           onClick={() => setCurrentSection("skills")}
-          className="text-md font-light sm:text-sm md:text-lg lg:text-xl text-gray-700 hover:text-gray-900 transition-all duration-300 hover:scale-105"
+          className="text-md font-bold text-gray-400 sm:text-sm md:text-lg lg:text-xl hover:text-gray-900 transition-all duration-300 hover:scale-105"
           aria-label="Navigate to Skills section"
         >
           My Skills
